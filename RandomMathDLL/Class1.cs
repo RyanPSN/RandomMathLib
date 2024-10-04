@@ -148,8 +148,9 @@ namespace RandomMathDLL
 
             foreach (string name in names)
             {
-                SetName(name);
-                Console.WriteLine("Name: {0}", name);
+                var listName = SetName(name);
+                Console.WriteLine("Name: {0}", listName);
+                Console.ReadLine();
             }
 
 
