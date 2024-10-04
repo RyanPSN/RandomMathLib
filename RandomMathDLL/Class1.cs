@@ -10,6 +10,28 @@ namespace RandomMathDLL
     {
         public static List<string> opAdd = new List<string>();
         public static Random r = new Random();
+        public static bool isNotCorrect = false;
+
+        public int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        public int Sub(int a, int b)
+        {
+            return a - b;
+        }
+
+        public int Mul(int a, int b)
+        {
+            return a * b;
+        } 
+
+        public int Div(int a, int b)
+        {
+            return a / b;
+        }
+                     
         public string GetHelloMessage(string message)
         {
 
@@ -39,6 +61,65 @@ namespace RandomMathDLL
         {
             return r.Next(b, a);
         }
+        
+            
 
+        public void notGetAnswer(string op, int b, int c)
+        {
+
+            var num1 = getRandomNum(b, c);
+
+            while(!isNotCorrect)
+            {
+                Console.WriteLine("Did You Get The Problem: ");
+                string answer = Console.ReadLine();
+
+
+                if (answer.Equals("No"))
+                {
+                    if (op.Equals("+"))
+                    {
+                        var answeredVar = b + c;
+                        Console.WriteLine("The Correct Answer: {0} + {2} = {3}", b, op, c, answeredVar);
+                        Console.ReadLine();
+
+                    }
+                    
+                    if (op.Equals("-"))
+                    {
+                        var answeredVar = b - c;
+                        Console.WriteLine("The Correct Answer: {0} - {2} = {3}", b, op, c, answeredVar);
+                        Console.ReadLine();
+                    }
+
+                    if (op.Equals("*"))
+                    {
+                        var answeredVar = b * c;
+                        Console.WriteLine("The Correct Answer: {0} * {2} = {3}", b, op, c, answeredVar);
+                        Console.ReadLine();
+                    }
+
+                    if (op.Equals("/"))
+                    {
+                        var answeredVar = b / c;
+                        Console.WriteLine("The Correct Answer: {0} / {2} = {3}", b, op, c, answeredVar);
+                        Console.ReadLine();
+                    }
+
+                }
+
+                else if (answer.Equals("Yes"))
+                {
+
+                    Console.WriteLine("What is: {0} {1} {2}: ", b, op, c);
+                  
+                    Console.ReadLine();
+                }
+
+
+
+                isNotCorrect = true;
+            }
+        }
     }
 }
