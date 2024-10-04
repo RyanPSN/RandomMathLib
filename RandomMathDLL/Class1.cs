@@ -10,8 +10,9 @@ namespace RandomMathDLL
     public class RandomNum
     {
         public static List<string> opAdd = new List<string>();
-        public static List<string> names = new List<string>();        
-        
+        public static List<string> names = new List<string>();
+        public static List<string> wordName = new List<string>();
+
         public static Random r = new Random();
         public static bool isNotCorrect = false;
 
@@ -67,11 +68,13 @@ namespace RandomMathDLL
         }
         
             
+        public static int SetNumber(int num)
+        {
+            return num;
+        }
 
         public void notGetAnswer(string op, int b, int c)
         {
-
-            var num1 = getRandomNum(b, c);
 
             while(!isNotCorrect)
             {
@@ -84,30 +87,55 @@ namespace RandomMathDLL
                     if (op.Equals("+"))
                     {
                         var answeredVar = b + c;
-                        Console.WriteLine("The Correct Answer: {0} + {2} = {3}", b, op, c, answeredVar);
-                        Console.ReadLine();
+
+                        foreach (var a in answeredVar.ToString())
+                        {
+                            Console.WriteLine("The Correct Answer: {0} + {2} = {3}", b, op, c, a);
+                            Console.ReadLine();
+
+                        }
 
                     }
                     
                     if (op.Equals("-"))
                     {
                         var answeredVar = b - c;
-                        Console.WriteLine("The Correct Answer: {0} - {2} = {3}", b, op, c, answeredVar);
-                        Console.ReadLine();
+
+                        foreach (var a in answeredVar.ToString())
+                        {
+                            Console.WriteLine("The Correct Answer: {0} - {2} = {3}", b, op, c, answeredVar);
+                            Console.ReadLine();
+
+                        }
+
                     }
 
                     if (op.Equals("*"))
                     {
                         var answeredVar = b * c;
-                        Console.WriteLine("The Correct Answer: {0} * {2} = {3}", b, op, c, answeredVar);
-                        Console.ReadLine();
+
+
+                        foreach (var a in answeredVar.ToString())
+                        {
+
+                            Console.WriteLine("The Correct Answer: {0} * {2} = {3}", b, op, c, answeredVar);
+                            Console.ReadLine();
+
+                        }
+
                     }
 
                     if (op.Equals("/"))
                     {
                         var answeredVar = b / c;
-                        Console.WriteLine("The Correct Answer: {0} / {2} = {3}", b, op, c, answeredVar);
-                        Console.ReadLine();
+
+                        foreach (var a in answeredVar.ToString())
+                        {
+
+                            Console.WriteLine("The Correct Answer: {0} / {2} = {3}", b, op, c, answeredVar);
+                            Console.ReadLine();
+
+                        }
                     }
 
                 }
@@ -135,6 +163,25 @@ namespace RandomMathDLL
         
         }
 
+        public static string WordName(string wordName)
+        {
+            return wordName;
+
+        }
+
+        public static void getWordName()
+        {
+            Console.WriteLine("Enter Fruit Name 1:");
+            foreach(string a in wordName)
+            {
+                Console.WriteLine("Enter Fruit Name {0}:", a);
+                string wordNames = WordName(a);
+           
+            }
+
+
+
+        }
 
         public static void getWordProblemName()
         {
@@ -151,9 +198,17 @@ namespace RandomMathDLL
                 var listName = SetName(name);
                 Console.WriteLine("Name: {0}", listName);
                 Console.ReadLine();
+
+
             }
 
 
+
+
         }
+        
+
+    
     }
+
 }
