@@ -12,28 +12,33 @@ namespace RandomMathDLL
         public static List<string> opAdd = new List<string>();
         public static List<string> names = new List<string>();
         public static List<string> wordName = new List<string>();
+        public static string itemOne;
+        public static string itemTwo;
+        public static string itemThree;
+        public static string itemFour;
+        public static string itemFive;
 
         public static Random r = new Random();
         public static bool isNotCorrect = false;
 
         public int Add(int a, int b)
         {
-            return a + b;
+            return Math.Abs(a + b);
         }
 
         public int Sub(int a, int b)
         {
-            return a - b;
+            return Math.Abs(a - b);
         }
 
         public int Mul(int a, int b)
         {
-            return a * b;
+            return Math.Abs(a * b);
         } 
 
         public int Div(int a, int b)
         {
-            return a / b;
+            return Math.Abs(a / b);
         }
                      
         public string GetHelloMessage(string message)
@@ -64,7 +69,7 @@ namespace RandomMathDLL
 
         public int getRandomNum(int a, int b)
         {
-            return r.Next(b, a);
+            return r.Next(a, b);
         }
         
             
@@ -72,6 +77,12 @@ namespace RandomMathDLL
         {
             return num;
         }
+
+        public int Answer()
+        {
+            return int.Parse(Console.ReadLine());
+        }
+
 
         public void notGetAnswer(string op, int b, int c)
         {
@@ -86,27 +97,23 @@ namespace RandomMathDLL
                 {
                     if (op.Equals("+"))
                     {
-                        var answeredVar = b + c;
+                        var answeredVar = Math.Abs(b + c);
 
-                        foreach (var a in answeredVar.ToString())
-                        {
-                            Console.WriteLine("The Correct Answer: {0} + {2} = {3}", b, op, c, a);
-                            Console.ReadLine();
-
-                        }
-
+                        Console.WriteLine("The Correct Answer: {0} + {2} = {3}", b, op, c);
+                        Console.ReadLine();
                     }
-                    
-                    if (op.Equals("-"))
+
+
+
+
+                    if (op.Equals("-")) 
                     {
-                        var answeredVar = b - c;
 
-                        foreach (var a in answeredVar.ToString())
-                        {
-                            Console.WriteLine("The Correct Answer: {0} - {2} = {3}", b, op, c, answeredVar);
-                            Console.ReadLine();
+                        var answeredVar = Math.Abs(b - c);
 
-                        }
+                        Console.WriteLine("The Correct Answer: {0} - {2} = {3}", b, op, c, answeredVar);
+                        Console.ReadLine();
+
 
                     }
 
@@ -115,36 +122,58 @@ namespace RandomMathDLL
                         var answeredVar = b * c;
 
 
-                        foreach (var a in answeredVar.ToString())
-                        {
-
-                            Console.WriteLine("The Correct Answer: {0} * {2} = {3}", b, op, c, answeredVar);
-                            Console.ReadLine();
-
-                        }
+                        Console.WriteLine("The Correct Answer: {0} * {2} = {3}", b, op, c, answeredVar);
+                        Console.ReadLine();
 
                     }
+
+                
 
                     if (op.Equals("/"))
                     {
                         var answeredVar = b / c;
 
-                        foreach (var a in answeredVar.ToString())
-                        {
+                        Console.WriteLine("The Correct Answer: {0} / {2} = {3}", b, op, c, answeredVar);
+                        Console.ReadLine();
 
-                            Console.WriteLine("The Correct Answer: {0} / {2} = {3}", b, op, c, answeredVar);
-                            Console.ReadLine();
-
-                        }
                     }
 
                 }
 
-                else if (answer.Equals("Yes"))
+                else if (answer.Equals("Yes") )
                 {
 
                     Console.WriteLine("What is: {0} {1} {2}: ", b, op, c);
-                  
+
+                    int num = Answer();
+
+                    if (op.Equals("+") && num == Add(b, c))
+                    {
+                        Console.WriteLine("Correct");
+
+                        Console.ReadLine();
+                    }
+                    
+                    if (op.Equals("-") && num == Sub(b, c))
+                    {
+                        Console.WriteLine("Correct");
+
+                        Console.ReadLine();
+                    }                             
+                    if (op.Equals("*") && num == Mul(b, c))
+                    {
+                        Console.WriteLine("Correct");
+
+                        Console.ReadLine();
+                    }
+                    
+                    if (op.Equals("/") && num == Div(b, c))
+                    {
+                        Console.WriteLine("Correct");
+
+                        Console.ReadLine();
+                    }
+
                     Console.ReadLine();
                 }
 
@@ -185,23 +214,37 @@ namespace RandomMathDLL
 
         public static void getWordProblemName()
         {
-            Console.WriteLine("Ener Name 1: ");
+            Console.WriteLine("Enter Name 1: ");
             string name1 = Console.ReadLine();
-            Console.WriteLine("Ener Name 2: ");
+            Console.WriteLine("Enter Name 2: ");
             string name2 = Console.ReadLine();
             Console.WriteLine("Ener Name 3: ");
             string name3 = Console.ReadLine();
 
+            Console.WriteLine("Enter Num for Item: ");
+            int num = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Enter Num for Item: ");
+            int num2 = int.Parse(Console.ReadLine());
 
-            foreach (string name in names)
-            {
-                var listName = SetName(name);
-                Console.WriteLine("Name: {0}", listName);
-                Console.ReadLine();
+            Console.WriteLine("Enter Item One Name: ");
+            itemOne = Console.ReadLine();
 
+            Console.WriteLine("Enter Item, Two Name: ");
+            itemTwo = Console.ReadLine();
 
-            }
+            Console.WriteLine("Enter Item Three Name: ");
+            itemThree = Console.ReadLine();
 
+            Console.WriteLine("Enter Item Four Name: ");
+            itemFour = Console.ReadLine();
+
+            Console.WriteLine("Enter Item Five Name: ");
+            itemFive = Console.ReadLine();
+            
+
+            Console.WriteLine(": {0} had {1} {2} Gave {0} ", name1);
+            Console.ReadLine();
 
 
 
