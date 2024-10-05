@@ -12,11 +12,7 @@ namespace RandomMathDLL
         public static List<string> opAdd = new List<string>();
         public static List<string> names = new List<string>();
         public static List<string> wordName = new List<string>();
-        public static string itemOne;
-        public static string itemTwo;
-        public static string itemThree;
-        public static string itemFour;
-        public static string itemFive;
+
 
         public static Random r = new Random();
         public static bool isNotCorrect = false;
@@ -56,15 +52,25 @@ namespace RandomMathDLL
         public string getOperator()
         {
 
+            int n = 0;
+
             opAdd.Add("+");
             opAdd.Add("-");
             opAdd.Add("*");
             opAdd.Add("/");
 
-            int n = r.Next(opAdd.Count);
+            n = r.Next(opAdd.Count);
 
+            foreach (var ops in opAdd)
+            {
+                n = r.Next(opAdd.Count);
+
+
+                return opAdd[n];
+
+            }
+            
             return opAdd[n];
-
         }
 
         public int getRandomNum(int a, int b)
@@ -224,6 +230,9 @@ namespace RandomMathDLL
             {
                 Console.WriteLine("Enter Fruit Name {0}:", a);
                 string wordNames = WordName(a);
+
+                Console.WriteLine(wordNames);
+                Console.ReadLine();
            
             }
 
