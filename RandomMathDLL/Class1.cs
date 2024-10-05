@@ -230,46 +230,6 @@ namespace RandomMathDLL
 
 
         }
-
-        public static void getWordProblemName()
-        {
-            Console.WriteLine("Enter Name 1: ");
-            string name1 = Console.ReadLine();
-            Console.WriteLine("Enter Name 2: ");
-            string name2 = Console.ReadLine();
-            Console.WriteLine("Ener Name 3: ");
-            string name3 = Console.ReadLine();
-
-            Console.WriteLine("Enter Num for Item: ");
-            int num = int.Parse(Console.ReadLine());
-            
-            Console.WriteLine("Enter Num for Item: ");
-            int num2 = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter Item One Name: ");
-            itemOne = Console.ReadLine();
-
-            Console.WriteLine("Enter Item, Two Name: ");
-            itemTwo = Console.ReadLine();
-
-            Console.WriteLine("Enter Item Three Name: ");
-            itemThree = Console.ReadLine();
-
-            Console.WriteLine("Enter Item Four Name: ");
-            itemFour = Console.ReadLine();
-
-            Console.WriteLine("Enter Item Five Name: ");
-            itemFive = Console.ReadLine();
-            
-
-            Console.WriteLine(": {0} had {1} {2} Gave {0} ", name1);
-            Console.ReadLine();
-
-
-
-        }
-        
-
     
     }
 
