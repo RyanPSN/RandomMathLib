@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.35229.62
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomMathDLL", "RandomMathDLL\RandomMathDLL.csproj", "{49DFB585-6D7C-410E-9687-2CC36E48AC0C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomAddition", "RandomAddition\RandomAddition.csproj", "{00628BE7-AF16-437B-B15B-FD0AD9473301}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{49DFB585-6D7C-410E-9687-2CC36E48AC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49DFB585-6D7C-410E-9687-2CC36E48AC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49DFB585-6D7C-410E-9687-2CC36E48AC0C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00628BE7-AF16-437B-B15B-FD0AD9473301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00628BE7-AF16-437B-B15B-FD0AD9473301}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00628BE7-AF16-437B-B15B-FD0AD9473301}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00628BE7-AF16-437B-B15B-FD0AD9473301}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

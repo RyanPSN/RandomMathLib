@@ -98,9 +98,13 @@ namespace RandomMathDLL
                     if (op.Equals("+"))
                     {
                         var answeredVar = Math.Abs(b + c);
+                        foreach(var a in answeredVar.ToString())
+                        {
+                            Console.WriteLine("The Correct Answer: {0} + {2} = {3}", b, op, c);
+                            Console.ReadLine();
 
-                        Console.WriteLine("The Correct Answer: {0} + {2} = {3}", b, op, c);
-                        Console.ReadLine();
+                        }
+
                     }
 
 
@@ -111,8 +115,12 @@ namespace RandomMathDLL
 
                         var answeredVar = Math.Abs(b - c);
 
-                        Console.WriteLine("The Correct Answer: {0} - {2} = {3}", b, op, c, answeredVar);
-                        Console.ReadLine();
+                        foreach (var a in answeredVar.ToString())
+                        {
+                            Console.WriteLine("The Correct Answer: {0} - {2} = {3}", b, op, c, answeredVar);
+                            Console.ReadLine();
+
+                        }
 
 
                     }
@@ -121,9 +129,15 @@ namespace RandomMathDLL
                     {
                         var answeredVar = b * c;
 
+                        foreach (var a in answeredVar.ToString())
+                        {
 
-                        Console.WriteLine("The Correct Answer: {0} * {2} = {3}", b, op, c, answeredVar);
-                        Console.ReadLine();
+
+                            Console.WriteLine("The Correct Answer: {0} * {2} = {3}", b, op, c, answeredVar);
+                            Console.ReadLine();
+
+                        }
+
 
                     }
 
@@ -133,8 +147,13 @@ namespace RandomMathDLL
                     {
                         var answeredVar = b / c;
 
-                        Console.WriteLine("The Correct Answer: {0} / {2} = {3}", b, op, c, answeredVar);
-                        Console.ReadLine();
+
+                        foreach(var a in answeredVar.ToString())
+                        {
+
+                            Console.WriteLine("The Correct Answer: {0} * {2} = {3}", b, op, c, answeredVar);
+                            Console.ReadLine();
+                        }
 
                     }
 
